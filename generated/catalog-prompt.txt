@@ -1,0 +1,37 @@
+# unnamed Component Catalog
+
+## Available Components
+
+### Card
+
+### Metric
+
+### Button
+
+### Text
+
+### Grid
+
+### Chart
+
+## Available Actions
+
+- `export_report`: 导出报表为 PDF
+- `refresh_data`: 刷新所有数据
+- `navigate`: 导航到指定页面
+- `submit`: 提交表单
+
+## Visibility Conditions
+
+Components can have a `visible` property:
+- `true` / `false` - Always visible/hidden
+- `{ "path": "/data/path" }` - Visible when path is truthy
+- `{ "auth": "signedIn" }` - Visible when user is signed in
+- `{ "and": [...] }` - All conditions must be true
+- `{ "or": [...] }` - Any condition must be true
+- `{ "not": {...} }` - Negates a condition
+- `{ "eq": [a, b] }` - Equality check
+
+## Validation Functions
+
+Built-in: `required`, `email`, `minLength`, `maxLength`, `pattern`, `min`, `max`, `url`
